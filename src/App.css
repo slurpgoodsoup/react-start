@@ -31,6 +31,8 @@ a:visited {
 
 .nav-list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .nav-list__el {
@@ -41,14 +43,22 @@ a:visited {
 .nav-list__el a {
   display: block;
 }
-.nav-list__el:nth-child(even) {
+.nav-list__el:nth-child(odd) {
   background-color: beige;
+}
+.nav-list__el:hover {
+  background-color: blanchedalmond;
+  transition: 0.7s;
+}
+
+.nav-list__el:not(:hover){
+  transition: 0.7s;
 }
 
 .main-content {
   grid-area: m;
   background-color: beige;
-  padding: 0 10px;
+  padding: 10px;
 }
 
 .profile__bg-img {
@@ -99,6 +109,7 @@ a:visited {
 }
 
 .posts-list-el {
+  padding: 10px;
   margin: 20px 0;
   display: grid;
   grid-template-areas:
