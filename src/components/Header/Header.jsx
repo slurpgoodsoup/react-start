@@ -1,8 +1,10 @@
+import style from './Header.module.css';
+
 const Header = () => {
   return (
-    <header className="header">
+    <header className={style.header}>
       <img
-        className="header__icon"
+        className={style.header__icon}
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Adidas_Logo.svg/2560px-Adidas_Logo.svg.png"
       />
     </header>

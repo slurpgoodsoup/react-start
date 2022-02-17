@@ -1,0 +1,29 @@
+.nav {
+    grid-area: n;
+  }
+  
+  .navList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navList__el {
+    font-size: 20px;
+    padding: 10px;
+  }
+  
+  .navList__el a {
+    display: block;
+  }
+  .navList__el:nth-child(odd) {
+    background-color: beige;
+  }
+  .navList__el:hover {
+    background-color: blanchedalmond;
+    transition: 0.3s;
+  }
+  
+  .navList__el:not(:hover){
+    transition: 0.3s;
+  }
