@@ -1,28 +1,3 @@
-.postsListEl {
-    padding: 10px;
-    margin: 20px 0;
-    display: grid;
-    grid-template-areas:
-      "p n"
-      "p t";
-    justify-content: flex-start;
-    background-color: bisque;
-    border-radius: 50px;
-  }
-  
-  .postsListEl__photo {
-    width: 80px;
-    height: 80px;
-    border-radius: 50px;
-    grid-area: p;
-  }
-  
-  .postsListEl__name {
-    grid-area: n;
-    margin: 0 15px;
-  }
-  
-  .postsListEl__text {
-    grid-area: t;
-    margin: 0 15px;
-  }
+.postsList{
+    
+}

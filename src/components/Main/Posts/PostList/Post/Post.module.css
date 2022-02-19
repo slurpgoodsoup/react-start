@@ -1,0 +1,28 @@
+.post {
+    padding: 10px;
+    margin: 20px 0;
+    display: grid;
+    grid-template-areas:
+      "p n"
+      "p t";
+    justify-content: flex-start;
+    background-color: bisque;
+    border-radius: 50px;
+  }
+  
+  .post__photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    grid-area: p;
+  }
+  
+  .post__name {
+    grid-area: n;
+    margin: 0 15px;
+  }
+  
+  .post__text {
+    grid-area: t;
+    margin: 0 15px;
+  }
