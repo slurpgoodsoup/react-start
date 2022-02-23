@@ -11,6 +11,9 @@ a:visited {
   max-width: 1200px;
   display: grid;
   grid-template-areas:
-    "h h h h"
-    "n m m m";
+    "h h h h h h h h h h h h h"
+    "n m m m m m m m m m m m m";
+}
+.main-content{
+  grid-area: m;
 }

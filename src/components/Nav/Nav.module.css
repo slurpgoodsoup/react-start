@@ -28,3 +28,8 @@
   .navList__el:not(:hover){
     transition: 0.3s;
   }
+
+  .active{
+    padding-left: 10px;
+    text-decoration: underline;
+  }

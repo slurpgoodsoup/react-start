@@ -1,0 +1,24 @@
+.dialogs{
+    display: flex;
+    background-color: bisque;
+    /* justify-content:space-between; */
+}
+
+.dialogsList{
+    min-width: 200px;
+    padding: 5px 15px;
+    background-color: beige;
+}
+
+.dialogsList > ul{
+    padding: 0;
+    padding-left: 10px;
+}
+
+.messagesList{
+    padding: 15px;
+    flex-basis: 70%;
+    align-self: flex-end;
+}
+
+
