@@ -1,9 +1,7 @@
 import style from './ProfileInfo.module.css'
 
-
-
 const ProfileInfo = (props) => {
-  console.log(props.profileInfoData);
+  console.log(props)
     return (
     <div className={style.pfofile}>
           <img
