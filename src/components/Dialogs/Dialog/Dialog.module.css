@@ -1,0 +1,12 @@
+.dialog_active {
+    font-size: 25px;
+    font-weight: 400px;
+}
+
+.dialog{
+    /* list-style-type: none; */
+    padding: 0 20px;
+    margin: 25px 20px;
+    cursor: pointer;
+    font-size: 20px;
+}

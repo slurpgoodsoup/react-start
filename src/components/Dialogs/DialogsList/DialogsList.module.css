@@ -1,0 +1,10 @@
+.dialogsList{
+    min-width: 200px;
+    padding: 5px 15px;
+    background-color: beige;
+}
+
+.dialogsList > ul{
+    padding: 0;
+    padding-left: 10px;
+}

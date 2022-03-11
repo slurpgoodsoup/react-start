@@ -1,0 +1,9 @@
+.header {
+    grid-area: h;
+    background-color: blanchedalmond;
+    margin-bottom: 10px;
+  }
+  
+  .header__icon {
+    width: 50px;
+  }

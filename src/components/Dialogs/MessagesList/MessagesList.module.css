@@ -1,0 +1,5 @@
+.messagesList{
+    padding: 15px;
+    flex-basis: 70%;
+    align-self: flex-end;
+}
