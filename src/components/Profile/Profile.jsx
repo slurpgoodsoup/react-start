@@ -1,13 +1,15 @@
-import Profile from "./Profile/Profile";
+import ProfileInfo from "./Profile/ProfileInfo";
 import Posts from './Posts/Posts';
 import style from './Profile.module.css';
-const Main = () => {
+
+const Profile = (props) => {
+  console.log(props);
   return (
     <div className={style.mainContent}>
-        <Profile />
-        <Posts />
+        <ProfileInfo profileInfoData = {props.profileInfoData} />
+        <Posts postsData = {props.postsData}/>
       </div>
   )
 };
 
-export default Main;
+export default Profile;

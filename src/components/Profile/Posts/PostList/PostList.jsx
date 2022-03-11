@@ -1,12 +1,12 @@
 import style from './PostList.module.css'
 import Post from './Post/Post.jsx';
 
-const PostList = () => {
+const PostList = (props) => {
+    let postsElements = props.postsData.map (post => <Post id = {post.id} name = {post.name} text = {post.text} />);
+   
     return (
         <div className={style.postsList}>
-            <Post name = "lox" text = "text" />
-            <Post name = "ну да я" text = "хочу питьсю.............." />
-            <Post name = "Котек" text = "ОООООООООУОУОООООООООООООУОУООООООООООООООООООООООУОО" />
+            {postsElements}
         </div>
     )};
 
