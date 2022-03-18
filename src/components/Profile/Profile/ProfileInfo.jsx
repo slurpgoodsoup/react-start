@@ -1,12 +1,11 @@
 import style from './ProfileInfo.module.css'
 
 const ProfileInfo = (props) => {
-  console.log(props)
     return (
     <div className={style.pfofile}>
           <img
             className={style.profile__bgImg}
-            src="https://i.ytimg.com/vi/Zr-qM5Vrd0g/maxresdefault.jpg"
+            src="https://funart.pro/uploads/posts/2021-07/1625692181_22-funart-pro-p-kotik-laik-zhivotnie-krasivo-foto-46.jpg"
           />
           <img
             className={style.profile__photo}

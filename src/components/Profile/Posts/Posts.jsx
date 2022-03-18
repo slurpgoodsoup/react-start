@@ -6,8 +6,8 @@ const Posts = (props) => {
   return (
     <div className={style.posts}>
     <p className={style.posts__myPosts}>My posts</p>
-    <NewPost />
-    <PostList postsData = {props.postsData} />
+    <NewPost dispatch = {props.dispatch} profilePage = {props.profilePage}/>
+    <PostList profilePage = {props.profilePage}/>
   </div>
   )
 };
