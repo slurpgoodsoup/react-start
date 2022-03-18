@@ -2,7 +2,7 @@ import "./index.css";
 import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import store from "./state";
+import store from "./redux/state";
 import App from "./App";
 
 let rerenderEniteTree = (state) => {

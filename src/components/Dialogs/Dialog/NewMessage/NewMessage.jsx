@@ -1,6 +1,6 @@
 import style from "./NewMessage.module.css";
 import React from "react";
-import {sendMessageActionCreator, updateNewMessageTextActionCreator} from '../../../../state'
+import {sendMessageActionCreator, updateNewMessageTextActionCreator} from '../../../../redux/state'
 
 let newref = React.createRef();
 
