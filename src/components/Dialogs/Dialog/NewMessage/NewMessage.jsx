@@ -1,6 +1,5 @@
 import style from "./NewMessage.module.css";
 import React from "react";
-import {sendMessageActionCreator, updateNewMessageTextActionCreator} from '../../../../redux/state'
 
 let newref = React.createRef();
 
@@ -8,11 +7,11 @@ const newMessage = (props) => {
 
   let onMessageChange = () => {
     let newMessageText = newref.current.value;
-    props.dispatch(updateNewMessageTextActionCreator(newMessageText));
+    props.onMessageChange(newMessageText)
   };
 
   let sendMessage = () => {
-    props.dispatch(sendMessageActionCreator());
+    props.sendMessage()
   };
 
   return (
@@ -20,7 +19,7 @@ const newMessage = (props) => {
       <textarea
         onChange={onMessageChange}
         ref={newref}
-        value={props.newMessageText}
+        value={props.currentText}
         className={style.newMessage__textarea}
         placeholder="Ну че там.."
       ></textarea>

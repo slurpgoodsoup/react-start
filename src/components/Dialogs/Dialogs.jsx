@@ -1,5 +1,5 @@
 import style from "./Dialogs.module.css";
-import NewMessage from "./Dialog/NewMessage/NewMessage";
+import NewMessageContainer from "./Dialog/NewMessage/NewMessageContainer";
 import DialogsList from "./DialogsList/DialogsList";
 import MessagesList from "./MessagesList/MessagesList";
 
@@ -10,7 +10,7 @@ const Dialogs = (props) => {
         <DialogsList dialogsData={props.state.dialogsData} />
         <MessagesList messagesData={props.state.messagesData} />
       </div>
-      <NewMessage
+      <NewMessageContainer
         newMessageText={props.state.newMessageText}
         dispatch = {props.dispatch}
       />

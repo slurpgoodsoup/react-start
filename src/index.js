@@ -2,7 +2,7 @@ import "./index.css";
 import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import store from "./redux/state";
+import store from "./redux/reduxStore";
 import App from "./App";
 
 let rerenderEniteTree = (state) => {
@@ -18,7 +18,12 @@ let rerenderEniteTree = (state) => {
 };
 
 rerenderEniteTree(store.getState());
-store.subscribe(rerenderEniteTree);
+// store.subscribe(rerenderEniteTree(store.getState()));
+store.subscribe(() => {
+  let state = store.getState()
+  rerenderEniteTree(state)
+});
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

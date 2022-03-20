@@ -1,9 +1,5 @@
 import profileReducer from "./profileReducer"
 import dialogsReducer from "./dialogsReducer"
-const ADD_POST = "ADD-POST"  
-const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT"
-const SEND_MESSAGE = "SEND-MESSAGE"
-const UPDATE_NEW_MESSAGE_TEXT = "UPDATE-NEW-MESSAGE-TEXT"
 
 const store = {
   _state: {
@@ -42,7 +38,7 @@ const store = {
   },
   _callSubscriber() {},
   getState() {
-    return this._state;
+    return this._state; // этого нет в редаксе
   },
 
   dispatch(action) {
@@ -51,24 +47,5 @@ const store = {
     this._callSubscriber(this._state);
   }
 }
-
-export const addPostActionCreator = () => ({
-      type: ADD_POST
-  })
-  
- export const updateNewPostTextActionCreator = (newMessageText) => ({
-      type: UPDATE_NEW_POST_TEXT,
-      newText: newMessageText
-  })
-
-export const sendMessageActionCreator = () => ({
-      type: SEND_MESSAGE
-  })
-  
- export const updateNewMessageTextActionCreator = (newMessageText) => ({
-      type: UPDATE_NEW_MESSAGE_TEXT,
-      newText: newMessageText
-  })
-
 export default store;
 window.state = store;
