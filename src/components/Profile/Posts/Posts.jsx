@@ -1,5 +1,5 @@
 import NewPostContainer from "./NewPost/NewPostContainer";
-import PostList from "./PostList/PostList";
+import PostListContainer from "./PostList/Post/PostListContainer";
 import style from "./Posts.module.css";
 
 const Posts = (props) => {
@@ -10,7 +10,7 @@ const Posts = (props) => {
         dispatch={props.dispatch}
         profilePage={props.profilePage}
       />
-      <PostList profilePage={props.profilePage} />
+      <PostListContainer/>
     </div>
   );
 };

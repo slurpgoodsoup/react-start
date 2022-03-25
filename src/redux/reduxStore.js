@@ -1,5 +1,4 @@
-import {createStore} from "redux"
-import {combineReducers} from "redux"
+import {createStore, combineReducers} from "redux"
 import profileReducer from "./profileReducer"
 import dialogsReducer from "./dialogsReducer"
 
@@ -9,6 +8,6 @@ let reducers = combineReducers({
 })
 
 let store = createStore(reducers)
-
+window.store = store;
 
 export default store;
