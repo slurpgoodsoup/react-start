@@ -20,6 +20,9 @@ const Nav = () => {
         <li className={style.navList__el}>
         <NavLink className = {(navData) => navData.isActive ? style.active : ''}  to = "/settings">Settings</NavLink>
         </li>
+        <li className={style.navList__el}>
+        <NavLink className = {(navData) => navData.isActive ? style.active : ''}  to = "/users">Users</NavLink>
+        </li>
       </ul>
     </nav>
   )};
