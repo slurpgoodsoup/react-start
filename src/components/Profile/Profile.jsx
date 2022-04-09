@@ -5,8 +5,8 @@ import style from './Profile.module.css';
 const Profile = (props) => {
   return (
     <div className={style.mainContent}>
-        <ProfileInfo profileInfoData = {props.state.profileInfoData} />
-        <Posts postsData = {props.state.postsData}/>
+        <ProfileInfo profileInfoData = {props.profilePage.profileInfoData} />
+        <Posts profilePage = {props.profilePage} dispatch = {props.dispatch}/>
       </div>
   )
 };

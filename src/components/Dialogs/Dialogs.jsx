@@ -1,16 +1,18 @@
 import style from "./Dialogs.module.css";
-import NewMessage from "./Dialog/NewMessage/NewMessage";
+import NewMessageContainer from "./Dialog/NewMessage/NewMessageContainer";
 import DialogsList from "./DialogsList/DialogsList";
-import MessagesList from "./MessagesList/MessagesList"
+import MessageListContainer from "./MessagesList/Message/MessageListContainer";
 
 const Dialogs = (props) => {
   return (
     <div className="dialogsPage">
       <div className={style.dialogs}>
-        <DialogsList dialogsData = {props.state.dialogsData} />
-        <MessagesList messagesData = {props.state.messagesData}/>
+        <DialogsList dialogsData={props.state.dialogsData} />
+        <MessageListContainer />
       </div>
-      <NewMessage />
+      <NewMessageContainer
+        // dispatch = {props.dispatch}
+      />
     </div>
   );
 };
