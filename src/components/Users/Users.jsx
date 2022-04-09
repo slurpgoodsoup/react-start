@@ -3,18 +3,15 @@ import * as axios from "axios";
 import style from "./Users.module.css";
 import noNamePhoto from "../../img/gtS0nPGhg4E.jpg";
 class Users extends React.Component {
-  getUsers = () => {
-    if (this.props.usersData.length === 0) {
-      axios
+  componentDidMount() {
+    axios
         .get("https://social-network.samuraijs.com/api/1.0/users")
         .then((response) => {
           this.props.setUsers(response.data.items);
         });
-    }
-  };
+  }
   render() {
     return <div>
-      <button onClick={this.getUsers}>GetUsers</button>
       {this.props.usersData.map((u) => (
         <div className={style.user} key={u.id}>
           <div className={style.user__img_btn}>
