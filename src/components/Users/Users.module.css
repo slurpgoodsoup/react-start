@@ -36,6 +36,8 @@
     "n d"
     "t t";
     min-width: 60%;
+    max-width: 65%;
+    word-break: break-all;
 }
 
 .user__text_name{
