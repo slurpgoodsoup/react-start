@@ -1,6 +1,10 @@
+import Preloader from '../../Preloader/Preloader'
 import style from './ProfileInfo.module.css'
 
 const ProfileInfo = (props) => {
+  if (!props.profile){
+    return <Preloader />
+  } else
     return (
     <div className={style.pfofile}>
           <img
@@ -9,15 +13,30 @@ const ProfileInfo = (props) => {
           />
           <img
             className={style.profile__photo}
-            src="https://i.ytimg.com/vi/HQfC7IFiQxA/maxresdefault.jpg"
+            src={props.profile.photos.large}
           />
 
           <div className={style.profileDesc}>
-            <p className={style.profileDesc__el}>{props.profileInfoData.name}</p>
-            <p className={style.profileDesc__el}>Date of birth: {props.profileInfoData.dateOfBirth}</p>
-            <p className={style.profileDesc__el}>City: {props.profileInfoData.city}</p>
-            <p className={style.profileDesc__el}>Education: {props.profileInfoData.education}</p>
-            <p className={style.profileDesc__el}>WebSite: {props.profileInfoData.webSite}</p>
+            <p className={style.profileDesc__el}>{props.profile.fullName}</p>
+            <p className={style.profileDesc__el}>Обо мне: {props.profile.aboutMe}</p>
+            <p className={style.profileDesc__el}>В поисках работы: {props.profile.lookingForAJob ? `да, ${props.profile.lookingForAJobDescription}` : "нет"}</p>
+            <p className={style.profileDesc__el}>- Соцсети -</p>
+            <p className={style.profileDesc__el}>{props.profile.contacts.facebook ? `Facebook: ${props.profile.contacts.facebook}` : ""
+            }</p>
+            <p className={style.profileDesc__el}>{props.profile.contacts.website ? `Вебсайт: ${props.profile.contacts.website}` : ""
+            }</p>
+            <p className={style.profileDesc__el}>{props.profile.contacts.vk ? `VK: ${props.profile.contacts.vk}` : ""
+            }</p>
+            <p className={style.profileDesc__el}>{props.profile.contacts.twitter ? `Twitter: ${props.profile.contacts.twitter}` : ""
+            }</p>
+            <p className={style.profileDesc__el}>{props.profile.contacts.instagram ? `Instagram: ${props.profile.contacts.instagram}` : ""
+            }</p>
+            <p className={style.profileDesc__el}>{props.profile.contacts.youtube ? `YouTube: ${props.profile.contacts.youtube}` : ""
+            }</p>
+            <p className={style.profileDesc__el}>{props.profile.contacts.github ? `GitHub: ${props.profile.contacts.github}` : ""
+            }</p>
+            <p className={style.profileDesc__el}>{props.profile.contacts.mainLink ? `Другое: ${props.profile.contacts.mainLink}` : ""
+            }</p>
           </div>
         </div>
     )};
