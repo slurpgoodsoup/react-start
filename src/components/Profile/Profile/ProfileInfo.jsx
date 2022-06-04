@@ -1,3 +1,4 @@
+import { Navigate } from 'react-router-dom';
 import Preloader from '../../Preloader/Preloader'
 import style from './ProfileInfo.module.css'
 
@@ -5,6 +6,7 @@ const ProfileInfo = (props) => {
   if (!props.profile){
     return <Preloader />
   } else
+  if (!props.isAuth) return <Navigate to = "/login/" />
     return (
     <div className={style.pfofile}>
           <img

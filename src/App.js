@@ -1,6 +1,6 @@
 import "./App.css";
 import Nav from "./components/Nav/Nav";
-import Dialogs from "./components/Dialogs/Dialogs";
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import { Route, Routes } from "react-router-dom";
 import UsersContainer from "./components/Users/UsersContainer";
 import ProfileContainer from "./components/Profile/Profile/ProfileContainer";
@@ -22,8 +22,7 @@ const App = (props) => {
           path="/profile/" element={
           <ProfileContainer
            />} />
-          <Route path="/dialogs/*" element={<Dialogs state = {props.state.dialogsPage}
-          dispatch = {props.dispatch} />} />
+          <Route path="/dialogs/*" element={<DialogsContainer />} />
           <Route path="/users/*" element={<UsersContainer />} />
           <Route path="/login" element={<Login />} />
         </Routes>
