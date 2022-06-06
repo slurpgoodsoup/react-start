@@ -5,7 +5,7 @@ import style from "./Dialogs.module.css"
 import { Navigate } from "react-router-dom";
 
 const Dialogs = (props) => {
-  if (!props.isAuth) return <Navigate to="/login"/>
+  
   return (
     <div className="dialogsPage">
       <div className={style.dialogs}>

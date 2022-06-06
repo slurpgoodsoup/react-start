@@ -6,7 +6,6 @@ const ProfileInfo = (props) => {
   if (!props.profile){
     return <Preloader />
   } else
-  if (!props.isAuth) return <Navigate to = "/login/" />
     return (
     <div className={style.pfofile}>
           <img
