@@ -1,6 +1,6 @@
-import { Navigate } from 'react-router-dom';
 import Preloader from '../../Preloader/Preloader'
 import style from './ProfileInfo.module.css'
+import Status from './Status/Status';
 
 const ProfileInfo = (props) => {
   if (!props.profile){
@@ -19,6 +19,7 @@ const ProfileInfo = (props) => {
 
           <div className={style.profileDesc}>
             <p className={style.profileDesc__el}>{props.profile.fullName}</p>
+            <Status status = {props.status} updateStatus = {props.updateStatus} />
             <p className={style.profileDesc__el}>Обо мне: {props.profile.aboutMe}</p>
             <p className={style.profileDesc__el}>В поисках работы: {props.profile.lookingForAJob ? `да, ${props.profile.lookingForAJobDescription}` : "нет"}</p>
             <p className={style.profileDesc__el}>- Соцсети -</p>

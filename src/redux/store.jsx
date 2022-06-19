@@ -9,14 +9,6 @@ const store = {
         { id: 0, name: "kotek", text: "oaoa" },
         { id: 1, name: "kotek1", text: "oaoa1" },
       ],
-      profileInfoData: {
-        id: 0,
-        name: "ну да я",
-        dateOfBirth: "2 Jan",
-        city: "Moscow",
-        education: "OAO'22",
-        webSite: "aoa.com",
-      },
     },
     dialogsPage: {
       dialogsData: [

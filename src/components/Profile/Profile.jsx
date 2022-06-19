@@ -5,7 +5,7 @@ import style from './Profile.module.css';
 const Profile = (props) => {
   return (
     <div className={style.mainContent}>
-        <ProfileInfo profileInfoData = {props.profilePage.profileInfoData} profile = {props.profile}/>
+        <ProfileInfo profile = {props.profile} status = {props.status} updateStatus = {props.updateStatus}/>
         <Posts profilePage = {props.profilePage} dispatch = {props.dispatch}/>
       </div>
   )
