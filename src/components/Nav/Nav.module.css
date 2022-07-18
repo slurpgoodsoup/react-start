@@ -1,6 +1,7 @@
 .nav {
     grid-area: n;
     min-width: 200px;
+    margin-right: 30px;
   }
   
   .navList {

@@ -1,0 +1,23 @@
+
+.error{
+    color: red;
+    margin: 2px;
+}
+.input{
+    margin: 10px 0;
+}
+.submitBtn{
+    display: block;
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: blanchedalmond;
+    border: 1px dotted black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input input {
+    border: 1px dotted black;
+    border-radius: 5px;
+    padding: 5px;
+}
