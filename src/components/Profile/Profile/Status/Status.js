@@ -18,7 +18,6 @@ class Status extends React.Component {
   }
 
   componentDidUpdate (prevProps, prevState) {
-    debugger
     if(prevProps.status !== this.props.status){
     this.setState({status: this.props.status})} // в this.props.status почему-то пустая строка((( но если обновить, но в prevProps пустая, а в пропс есть все
   }

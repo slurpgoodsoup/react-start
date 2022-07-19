@@ -3,8 +3,7 @@ import NewPost from "./NewPost";
 import PostList from '../PostList/PostList';
 import React from "react";
 import {
-  addPostActionCreator,
-  updateNewPostTextActionCreator,
+  addPostActionCreator
 } from "../../../../redux/profileReducer";
 
 // const NewPostContainer = (props) => {
@@ -24,11 +23,8 @@ let mapStateToProps = (state) => {
 }
 let mapDispatchToProps = (dispatch) => {
   return {
-    updateNewPostText: (text) => {
-      dispatch(updateNewPostTextActionCreator(text))
-    },
-    addPost: () => {
-      dispatch(addPostActionCreator())
+    addPost: (text) => {
+      dispatch(addPostActionCreator(text))
     }
   }
 }

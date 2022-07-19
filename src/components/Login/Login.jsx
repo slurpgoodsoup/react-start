@@ -1,21 +1,16 @@
 import React from "react";
-import { Formik, yupToFormErrors } from "formik";
+import {connect} from "react-redux"
+import { Formik } from "formik";
 import * as Yup from "yup";
 import style from './Login.module.css'
+import {login} from '../../redux/auth.Reducer'
 
-const Login = () => {
-  return <div>
-    <LoginForm />
-  </div>
-}
-
-const LoginForm = () => {
-
+const Login = (props) => {
   const validationSchema = Yup.object().shape({
     email: Yup.string().email('invalid email').required('Required'),
     password: Yup.string().required('Required')
   })
-
+  console.log(props)
   return <div className={style.loginPage}>
     <Formik
       initialValues={{
@@ -24,7 +19,7 @@ const LoginForm = () => {
         rememberMe: false
       }}
       validateOnBlur
-      onSubmit={(value) => console.log(value)}
+      onSubmit={(value) => props.login(value.email, value.password, value.rememberMe)}
       validationSchema = {validationSchema}
     >
       {({values, errors, touched, handleChange, handleBlur, handleSubmit, dirty, isValid})=> (
@@ -81,4 +76,4 @@ const LoginForm = () => {
 }
 
 
-export default Login;
+export default connect(null, {login})(Login);
