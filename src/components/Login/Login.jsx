@@ -4,13 +4,14 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import style from './Login.module.css'
 import {login} from '../../redux/auth.Reducer'
+import { Navigate } from 'react-router-dom';
 
 const Login = (props) => {
+  if (props.isAuth) return <Navigate to='/profile' />
   const validationSchema = Yup.object().shape({
     email: Yup.string().email('invalid email').required('Required'),
     password: Yup.string().required('Required')
   })
-  console.log(props)
   return <div className={style.loginPage}>
     <Formik
       initialValues={{
@@ -74,6 +75,8 @@ const Login = (props) => {
  </div>
 
 }
+let mapStateToProps = (state) => ({
+  isAuth: state.auth.isAuth
+})
 
-
-export default connect(null, {login})(Login);
+export default connect(mapStateToProps, {login})(Login);
