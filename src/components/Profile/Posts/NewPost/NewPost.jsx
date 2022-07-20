@@ -19,9 +19,9 @@ const NewPost = (props) => {
     }}
     validateOnBlur
     onSubmit={
-      (values) => {
+      (values, {resetForm}) => {
+        resetForm()
         addPost(values.postText)
-        values.postText = ''
       }}
     validationSchema = {validationSchema}
     >
