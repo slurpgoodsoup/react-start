@@ -20,7 +20,7 @@ const Login = (props) => {
         rememberMe: false
       }}
       validateOnBlur
-      onSubmit={(value) => props.login(value.email, value.password, value.rememberMe)}
+      onSubmit={(value, {setFieldValue}) => props.login(value.email, value.password, value.rememberMe, setFieldValue)}
       validationSchema = {validationSchema}
     >
       {({values, errors, touched, handleChange, handleBlur, handleSubmit, dirty, isValid})=> (
@@ -57,6 +57,10 @@ const Login = (props) => {
           value={values.checkbox}
           />
           <label>RememberMe</label>
+        </div>
+
+        <div>
+        {values.general ? <span>{values.general}</span>: null}
         </div>
 
         <div>

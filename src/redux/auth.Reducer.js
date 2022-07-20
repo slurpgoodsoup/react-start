@@ -31,11 +31,14 @@ export const getAuthUserData = () => (dispatch) => {
         }
         })
 }
-export const login = (email, password, rememberMe, captcha) => (dispatch) => {
-    authAPI.login(email, password, rememberMe)
+export const login = (email, password, rememberMe, setFieldValue) => (dispatch) => {
+    authAPI.login(email, password, rememberMe, setFieldValue)
     .then (response => {
         if (response.data.resultCode === 0) {
             dispatch(getAuthUserData())
+        }
+        else {
+            setFieldValue("general", response.data.messages.join(" "))
         }
     })
 }
@@ -43,7 +46,7 @@ export const logout = () => (dispatch) => {
     authAPI.logout()
     .then (response => {
         if (response.data.resultCode === 0) {
-            dispatch(setAuthUserData(null, null, null, false))
+            dispatch(setAuthUserData(null, null, null))
         }
     })
 }
